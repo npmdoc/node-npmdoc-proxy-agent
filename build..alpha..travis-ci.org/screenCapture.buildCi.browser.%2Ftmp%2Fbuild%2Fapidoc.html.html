@@ -1,0 +1,1006 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/TooTallNate/node-proxy-agent">proxy-agent (v2.0.0)</a>
+</h1>
+<h4>Maps proxy protocols to `http.Agent` implementations</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.proxy-agent">module proxy-agent</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxy-agent">
+            function <span class="apidocSignatureSpan"></span>proxy-agent
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks">
+            function <span class="apidocSignatureSpan">proxy-agent.</span>proxies.socks
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.super_">
+            function <span class="apidocSignatureSpan">proxy-agent.</span>super_
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">proxy-agent.</span>cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">proxy-agent.</span>proxies</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">proxy-agent.</span>super_.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.proxy-agent.cache">module proxy-agent.cache</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">boolean <span class="apidocSignatureSpan">proxy-agent.cache.</span>_allowStale</span>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.cache._lengthCalculator">
+            function <span class="apidocSignatureSpan">proxy-agent.cache.</span>_lengthCalculator
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">proxy-agent.cache.</span>_itemCount</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">proxy-agent.cache.</span>_length</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">proxy-agent.cache.</span>_lru</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">proxy-agent.cache.</span>_max</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">number <span class="apidocSignatureSpan">proxy-agent.cache.</span>_mru</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">proxy-agent.cache.</span>_cache</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">proxy-agent.cache.</span>_lruList</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">proxy-agent.cache.</span>_maxAge</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.proxy-agent.proxies">module proxy-agent.proxies</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.http">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>http
+            <span class="apidocSignatureSpan">(opts, secureEndpoint)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.https">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>https
+            <span class="apidocSignatureSpan">(opts, secureEndpoint)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks4">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks4
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks4a">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks4a
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks5">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks5
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks5h">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks5h
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.proxy-agent.proxies.socks">module proxy-agent.proxies.socks</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks.socks">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.proxies.socks.super_">
+            function <span class="apidocSignatureSpan">proxy-agent.proxies.socks.</span>super_
+            <span class="apidocSignatureSpan">(callback)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.proxy-agent.super_">module proxy-agent.super_</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.super_.super_">
+            function <span class="apidocSignatureSpan">proxy-agent.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.proxy-agent.super_.prototype">module proxy-agent.super_.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.proxy-agent.super_.prototype.addRequest">
+            function <span class="apidocSignatureSpan">proxy-agent.super_.prototype.</span>addRequest
+            <span class="apidocSignatureSpan">(req, host, port, localAddress)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.proxy-agent" id="apidoc.module.proxy-agent">module proxy-agent</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxy-agent" id="apidoc.element.proxy-agent.proxy-agent">
+        function <span class="apidocSignatureSpan"></span>proxy-agent
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function ProxyAgent(opts) {
+  if (!(this instanceof ProxyAgent)) return new ProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new TypeError('an HTTP(S) proxy server `host` and `protocol` must be specified!');
+  debug('creating new ProxyAgent instance: %o', opts);
+  Agent.call(this, connect);
+
+  var proxies;
+  if (opts.proxies) {
+    proxies = extend(Object.create(exports.proxies), opts.proxies);
+  } else {
+    proxies = exports.proxies;
+  }
+
+  // get the requested proxy "protocol"
+  var protocol = opts.protocol;
+  if (!protocol) {
+    throw new TypeError('You must specify a string "protocol" for the ' +
+                        'proxy type (' + types().join(', ') + ')');
+  }
+
+  // strip the trailing ":" if present
+  if (':' == protocol[protocol.length - 1]) {
+    protocol = protocol.substring(0, protocol.length - 1);
+  }
+
+  // get the proxy `http.Agent` creation function
+  var proxyFn = proxies[protocol];
+  if ('function' != typeof proxyFn) {
+    throw new TypeError('unsupported proxy protocol: "' + protocol + '"');
+  }
+
+  this.proxy = opts;
+  // format the proxy info back into a URI, since an opts object
+  // could have been passed in originally. This generated URI is used
+  // as part of the "key" for the LRU cache
+  this.proxyUri = url.format({
+    protocol: protocol + ':',
+    slashes: true,
+    hostname: opts.hostname || opts.host,
+    port: opts.port
+  });
+  this.proxyFn = proxyFn;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks" id="apidoc.element.proxy-agent.proxies.socks">
+        function <span class="apidocSignatureSpan">proxy-agent.</span>proxies.socks
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SocksProxyAgent(opts) {
+  if (!(this instanceof SocksProxyAgent)) return new SocksProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new Error('a SOCKS proxy server `host` and `port` must be specified!');
+  Agent.call(this, connect);
+
+  var proxy = extend({}, opts);
+
+  // prefer `hostname` over `host`, because of `url.parse()`
+  proxy.host = proxy.hostname || proxy.host;
+
+  // SOCKS doesn't *technically* have a default port, but this is
+  // the same default that `curl(1)` uses
+  proxy.port = +proxy.port || 1080;
+
+  if (proxy.host &amp;&amp; proxy.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete proxy.path;
+    delete proxy.pathname;
+  }
+
+  // figure out if we want socks v4 or v5, based on the "protocol" used.
+  // Defaults to 5.
+  proxy.lookup = false;
+  switch (proxy.protocol) {
+    case 'socks4:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks4a:':
+      proxy.version = 4;
+      break;
+    case 'socks5:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks:': // no version specified, default to 5h
+    case 'socks5h:':
+      proxy.version = 5;
+      break;
+    default:
+      throw new TypeError('A "socks" protocol must be specified! Got: ' + proxy.protocol);
+  }
+
+  this.proxy = proxy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.super_" id="apidoc.element.proxy-agent.super_">
+        function <span class="apidocSignatureSpan">proxy-agent.</span>super_
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Agent(callback) {
+  if (!(this instanceof Agent)) return new Agent(callback);
+  if ('function' != typeof callback) throw new Error('Must pass a "callback function"');
+  EventEmitter.call(this);
+  this.callback = callback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.proxy-agent.cache" id="apidoc.module.proxy-agent.cache">module proxy-agent.cache</a></h1>
+
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.cache._lengthCalculator" id="apidoc.element.proxy-agent.cache._lengthCalculator">
+        function <span class="apidocSignatureSpan">proxy-agent.cache.</span>_lengthCalculator
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function naiveLength() { return 1 }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.proxy-agent.proxies" id="apidoc.module.proxy-agent.proxies">module proxy-agent.proxies</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.http" id="apidoc.element.proxy-agent.proxies.http">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>http
+        <span class="apidocSignatureSpan">(opts, secureEndpoint)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function httpOrHttpsProxy(opts, secureEndpoint) {
+  if (secureEndpoint) {
+    // HTTPS
+    return new HttpsProxyAgent(opts);
+  } else {
+    // HTTP
+    return new HttpProxyAgent(opts);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.https" id="apidoc.element.proxy-agent.proxies.https">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>https
+        <span class="apidocSignatureSpan">(opts, secureEndpoint)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function httpOrHttpsProxy(opts, secureEndpoint) {
+  if (secureEndpoint) {
+    // HTTPS
+    return new HttpsProxyAgent(opts);
+  } else {
+    // HTTP
+    return new HttpProxyAgent(opts);
+  }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks" id="apidoc.element.proxy-agent.proxies.socks">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SocksProxyAgent(opts) {
+  if (!(this instanceof SocksProxyAgent)) return new SocksProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new Error('a SOCKS proxy server `host` and `port` must be specified!');
+  Agent.call(this, connect);
+
+  var proxy = extend({}, opts);
+
+  // prefer `hostname` over `host`, because of `url.parse()`
+  proxy.host = proxy.hostname || proxy.host;
+
+  // SOCKS doesn't *technically* have a default port, but this is
+  // the same default that `curl(1)` uses
+  proxy.port = +proxy.port || 1080;
+
+  if (proxy.host &amp;&amp; proxy.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete proxy.path;
+    delete proxy.pathname;
+  }
+
+  // figure out if we want socks v4 or v5, based on the "protocol" used.
+  // Defaults to 5.
+  proxy.lookup = false;
+  switch (proxy.protocol) {
+    case 'socks4:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks4a:':
+      proxy.version = 4;
+      break;
+    case 'socks5:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks:': // no version specified, default to 5h
+    case 'socks5h:':
+      proxy.version = 5;
+      break;
+    default:
+      throw new TypeError('A "socks" protocol must be specified! Got: ' + proxy.protocol);
+  }
+
+  this.proxy = proxy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks4" id="apidoc.element.proxy-agent.proxies.socks4">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks4
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SocksProxyAgent(opts) {
+  if (!(this instanceof SocksProxyAgent)) return new SocksProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new Error('a SOCKS proxy server `host` and `port` must be specified!');
+  Agent.call(this, connect);
+
+  var proxy = extend({}, opts);
+
+  // prefer `hostname` over `host`, because of `url.parse()`
+  proxy.host = proxy.hostname || proxy.host;
+
+  // SOCKS doesn't *technically* have a default port, but this is
+  // the same default that `curl(1)` uses
+  proxy.port = +proxy.port || 1080;
+
+  if (proxy.host &amp;&amp; proxy.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete proxy.path;
+    delete proxy.pathname;
+  }
+
+  // figure out if we want socks v4 or v5, based on the "protocol" used.
+  // Defaults to 5.
+  proxy.lookup = false;
+  switch (proxy.protocol) {
+    case 'socks4:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks4a:':
+      proxy.version = 4;
+      break;
+    case 'socks5:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks:': // no version specified, default to 5h
+    case 'socks5h:':
+      proxy.version = 5;
+      break;
+    default:
+      throw new TypeError('A "socks" protocol must be specified! Got: ' + proxy.protocol);
+  }
+
+  this.proxy = proxy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks4a" id="apidoc.element.proxy-agent.proxies.socks4a">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks4a
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SocksProxyAgent(opts) {
+  if (!(this instanceof SocksProxyAgent)) return new SocksProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new Error('a SOCKS proxy server `host` and `port` must be specified!');
+  Agent.call(this, connect);
+
+  var proxy = extend({}, opts);
+
+  // prefer `hostname` over `host`, because of `url.parse()`
+  proxy.host = proxy.hostname || proxy.host;
+
+  // SOCKS doesn't *technically* have a default port, but this is
+  // the same default that `curl(1)` uses
+  proxy.port = +proxy.port || 1080;
+
+  if (proxy.host &amp;&amp; proxy.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete proxy.path;
+    delete proxy.pathname;
+  }
+
+  // figure out if we want socks v4 or v5, based on the "protocol" used.
+  // Defaults to 5.
+  proxy.lookup = false;
+  switch (proxy.protocol) {
+    case 'socks4:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks4a:':
+      proxy.version = 4;
+      break;
+    case 'socks5:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks:': // no version specified, default to 5h
+    case 'socks5h:':
+      proxy.version = 5;
+      break;
+    default:
+      throw new TypeError('A "socks" protocol must be specified! Got: ' + proxy.protocol);
+  }
+
+  this.proxy = proxy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks5" id="apidoc.element.proxy-agent.proxies.socks5">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks5
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SocksProxyAgent(opts) {
+  if (!(this instanceof SocksProxyAgent)) return new SocksProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new Error('a SOCKS proxy server `host` and `port` must be specified!');
+  Agent.call(this, connect);
+
+  var proxy = extend({}, opts);
+
+  // prefer `hostname` over `host`, because of `url.parse()`
+  proxy.host = proxy.hostname || proxy.host;
+
+  // SOCKS doesn't *technically* have a default port, but this is
+  // the same default that `curl(1)` uses
+  proxy.port = +proxy.port || 1080;
+
+  if (proxy.host &amp;&amp; proxy.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete proxy.path;
+    delete proxy.pathname;
+  }
+
+  // figure out if we want socks v4 or v5, based on the "protocol" used.
+  // Defaults to 5.
+  proxy.lookup = false;
+  switch (proxy.protocol) {
+    case 'socks4:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks4a:':
+      proxy.version = 4;
+      break;
+    case 'socks5:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks:': // no version specified, default to 5h
+    case 'socks5h:':
+      proxy.version = 5;
+      break;
+    default:
+      throw new TypeError('A "socks" protocol must be specified! Got: ' + proxy.protocol);
+  }
+
+  this.proxy = proxy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks5h" id="apidoc.element.proxy-agent.proxies.socks5h">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks5h
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SocksProxyAgent(opts) {
+  if (!(this instanceof SocksProxyAgent)) return new SocksProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new Error('a SOCKS proxy server `host` and `port` must be specified!');
+  Agent.call(this, connect);
+
+  var proxy = extend({}, opts);
+
+  // prefer `hostname` over `host`, because of `url.parse()`
+  proxy.host = proxy.hostname || proxy.host;
+
+  // SOCKS doesn't *technically* have a default port, but this is
+  // the same default that `curl(1)` uses
+  proxy.port = +proxy.port || 1080;
+
+  if (proxy.host &amp;&amp; proxy.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete proxy.path;
+    delete proxy.pathname;
+  }
+
+  // figure out if we want socks v4 or v5, based on the "protocol" used.
+  // Defaults to 5.
+  proxy.lookup = false;
+  switch (proxy.protocol) {
+    case 'socks4:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks4a:':
+      proxy.version = 4;
+      break;
+    case 'socks5:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks:': // no version specified, default to 5h
+    case 'socks5h:':
+      proxy.version = 5;
+      break;
+    default:
+      throw new TypeError('A "socks" protocol must be specified! Got: ' + proxy.protocol);
+  }
+
+  this.proxy = proxy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.proxy-agent.proxies.socks" id="apidoc.module.proxy-agent.proxies.socks">module proxy-agent.proxies.socks</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks.socks" id="apidoc.element.proxy-agent.proxies.socks.socks">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.</span>socks
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function SocksProxyAgent(opts) {
+  if (!(this instanceof SocksProxyAgent)) return new SocksProxyAgent(opts);
+  if ('string' == typeof opts) opts = url.parse(opts);
+  if (!opts) throw new Error('a SOCKS proxy server `host` and `port` must be specified!');
+  Agent.call(this, connect);
+
+  var proxy = extend({}, opts);
+
+  // prefer `hostname` over `host`, because of `url.parse()`
+  proxy.host = proxy.hostname || proxy.host;
+
+  // SOCKS doesn't *technically* have a default port, but this is
+  // the same default that `curl(1)` uses
+  proxy.port = +proxy.port || 1080;
+
+  if (proxy.host &amp;&amp; proxy.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete proxy.path;
+    delete proxy.pathname;
+  }
+
+  // figure out if we want socks v4 or v5, based on the "protocol" used.
+  // Defaults to 5.
+  proxy.lookup = false;
+  switch (proxy.protocol) {
+    case 'socks4:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks4a:':
+      proxy.version = 4;
+      break;
+    case 'socks5:':
+      proxy.lookup = true;
+      // pass through
+    case 'socks:': // no version specified, default to 5h
+    case 'socks5h:':
+      proxy.version = 5;
+      break;
+    default:
+      throw new TypeError('A "socks" protocol must be specified! Got: ' + proxy.protocol);
+  }
+
+  this.proxy = proxy;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.proxies.socks.super_" id="apidoc.element.proxy-agent.proxies.socks.super_">
+        function <span class="apidocSignatureSpan">proxy-agent.proxies.socks.</span>super_
+        <span class="apidocSignatureSpan">(callback)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Agent(callback) {
+  if (!(this instanceof Agent)) return new Agent(callback);
+  if ('function' != typeof callback) throw new Error('Must pass a "callback function"');
+  EventEmitter.call(this);
+  this.callback = callback;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.proxy-agent.super_" id="apidoc.module.proxy-agent.super_">module proxy-agent.super_</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.super_.super_" id="apidoc.element.proxy-agent.super_.super_">
+        function <span class="apidocSignatureSpan">proxy-agent.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.proxy-agent.super_.prototype" id="apidoc.module.proxy-agent.super_.prototype">module proxy-agent.super_.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.proxy-agent.super_.prototype.addRequest" id="apidoc.element.proxy-agent.super_.prototype.addRequest">
+        function <span class="apidocSignatureSpan">proxy-agent.super_.prototype.</span>addRequest
+        <span class="apidocSignatureSpan">(req, host, port, localAddress)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">addRequest = function (req, host, port, localAddress) {
+  var opts;
+  if ('object' == typeof host) {
+    // &gt;= v0.11.x API
+    opts = extend({}, req._options, host);
+  } else {
+    // &lt;= v0.10.x API
+    opts = extend({}, req._options, { host: host, port: port });
+    if (null != localAddress) {
+      opts.localAddress = localAddress;
+    }
+  }
+
+  if (opts.host &amp;&amp; opts.path) {
+    // if both a `host` and `path` are specified then it's most likely the
+    // result of a `url.parse()` call... we need to remove the `path` portion so
+    // that `net.connect()` doesn't attempt to open that as a unix socket file.
+    delete opts.path;
+  }
+
+  // set default `port` if none was explicitly specified
+  if (null == opts.port) {
+    opts.port = opts.secureEndpoint ? 443 : 80;
+  }
+
+  delete opts.agent;
+  delete opts.hostname;
+  delete opts._defaultAgent;
+  delete opts.defaultPort;
+  delete opts.createConnection;
+
+  // hint to use "Connection: close"
+  // XXX: non-documented `http` module API :(
+  req._last = true;
+  req.shouldKeepAlive = false;
+
+  // clean up a bit of memory since we're no longer using this
+  req._options = null;
+
+  // create the `net.Socket` instance
+  var sync = true;
+  this.callback(req, opts, function (err, socket) {
+    function emitErr () {
+      req.emit('error', err);
+      // For Safety. Some additional errors might fire later on
+      // and we need to make sure we don't double-fire the error event.
+      req._hadError = true;
+    }
+    if (err) {
+      if (sync) {
+        // need to defer the "error" event, when sync, because by now the `req`
+        // instance hasn't event been passed back to the user yet...
+        process.nextTick(emitErr);
+      } else {
+        emitErr();
+      }
+    } else {
+      req.onSocket(socket);
+    }
+  });
+  sync = false;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+   if (agent) exports.cache.set(key, agent);
+ } else {
+   debug('cache hit with key: %o', key);
+ }
+
+ // XXX: agent.callback() is an agent-base-ism
+ // TODO: add support for generic `http.Agent` instances by calling
+ // agent.<span class="apidocCodeKeywordSpan">addRequest</span>(), but with support for &lt;= 0.10.x and &gt;= 0.12.x
+ agent.callback(req, opts, fn);
+}
+
+/**
+* Returns an Array of supported protocol string names.
+*
+* @return {Array}
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
